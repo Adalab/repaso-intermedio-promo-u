@@ -1,0 +1,59 @@
+@import 'core/variables';
+@import 'core/reset';
+@import 'layout/page';
+@import 'layout/header';
+@import 'layout/footer';
+
+:root {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+.main{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+font-size: 40px;
+text-align: center;
+color: #cc212a;
+}
+
+.title::first-line{
+    word-spacing: 100vw;
+}
+
+.footer{
+    width: 100vw;
+    bottom: 0;
+    position: fixed;
+    border-top: solid 2px #cc212a;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.ball{
+    background-color: #cc212a;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    transform: translateY(-50%);
+}
+
+@media all and (min-width: 768px){
+    .footer{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .ball{
+        transform: none;
+    }
+} 
